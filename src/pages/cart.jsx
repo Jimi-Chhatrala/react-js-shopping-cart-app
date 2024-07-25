@@ -19,7 +19,7 @@ export default function Cart() {
           <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
             <div className="flex flex-col justify-center items-center p-3">
               {cart.map((cartItem) => (
-                <CartTile cartItem={cartItem} />
+                <CartTile cartItem={cartItem} key={cartItem.id} />
               ))}
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function Cart() {
           <h1 className="text-gray-800 font-bold text-xl mb-2">
             Your cart is empty!
           </h1>
-          <Link to={"/"}>
+          <Link to={"/react-js-shopping-cart-app"}>
             <button className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
               SHOP NOW
             </button>
